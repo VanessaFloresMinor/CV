@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portafolio — Vanessa Flores</title>
+  <meta name="description" content="Portafolio digital de Vanessa Flores — Diseño Gráfico" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Stardom&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --accent: #5CA8F2;
+      --accent-light: #C9E7FF;
+      --muted: #5f5f5f;
+      --bg: #F4FAFF;
+      --card: #ffffff;
+      font-family: 'Stardom', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: #111;
+      font-family: 'Stardom', sans-serif;
+      width: 95%;
+      max-width: 1200px;
+      margin-inline: auto;
+    }
+
+    header {
+      background: linear-gradient(90deg, #fff 0%, #f6faff 100%);
+      box-shadow: 0 1px 6px rgba(0,0,0,.05);
+      font-family: 'Stardom', sans-serif;
+    }
+
+    .container { max-width: 100%; margin: 0 auto; padding: 2.5%; }
+    nav { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand__logo {
+      width: 56px; height: 56px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-light));
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-weight: 700; font-size: 22px;
+    }
+
+    .navlinks a {
+      margin-left: 12px; text-decoration: none;
+      color: var(--muted); font-weight: 600;
+      transition: color .3s ease;
+    }
+    .navlinks a:hover { color: var(--accent); }
+
+    main { padding: 3% 0; }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3%;
+      justify-content: space-between;
+    }
+
+    .card {
+      background: var(--card);
+      padding: 2.5%;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.04);
+      flex: 1 1 47%;
+      min-width: 280px;
+    }
+
+    h1, h2, h3 {
+      color: var(--accent);
+      margin-top: 0;
+    }
+    h1 { font-size: 1.9rem; margin-bottom: 0.5em; }
+    h2 { font-size: 1.5rem; margin-bottom: 0.5em; }
+    h3 { font-size: 1.2rem; margin-bottom: 0.5em; }
+
+    p.lead { color: var(--muted); font-size: 1rem; }
+    p, li, dd { font-size: 0.95rem; line-height: 1.6; }
+
+    .info { display: flex; flex-wrap: wrap; gap: 18px; align-items: center; }
+    .avatar {
+      width: 35%;
+      max-width: 140px;
+      aspect-ratio: 1/1;
+      border-radius: 12px;
+      background: #ddd;
+      object-fit: cover;
+    }
+
+    dl { margin: 0; }
+    dt { font-weight: 700; color: #222; }
+    dd { margin: 0 0 10px; color: var(--muted); }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+      padding: 2%;
+      place-items: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: contain;
+      background-color: #f7fbff;
+      border-radius: 14px;
+      border: 3px solid #fff;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+      padding: 6px;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+      filter: brightness(1.05);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+    }
+
+    footer {
+      padding: 3% 0;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-right: 12px;
+      text-decoration: none;
+      color: var(--muted);
+    }
+    .links a:hover { color: var(--accent); }
+
+    @media (max-width: 900px) {
+      .hero { flex-direction: column; }
+      .card { flex: 1 1 100%; }
+      .info { flex-direction: column; align-items: flex-start; }
+      .avatar { width: 100%; max-width: 200px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+
+      <nav>
+        <div class="brand">
+          <div class="brand__logo">VF</div>
+          <div>
+            <div style="font-weight:700;font-size:18px;">Vanessa Flores</div>
+            <div style="font-size:12px;color:var(--muted)">Diseño Gráfico — IADA</div>
+          </div>
+        </div>
+        <div class="navlinks">
+          <a href="#home">Home</a>
+          <a href="#info">Información</a>
+          <a href="#galeria">Galería</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HOME -->
+    <section id="home" class="hero">
+      <div class="card">
+        <h1>¡Holaaa! — Soy Vanessa Flores</h1>
+        <p class="lead">Estudiante de Diseño Gráfico en la Universidad Autónoma de Ciudad Juárez (Campus IADA). Trabajo con ilustración, lettering, origami, entre otras cosas. Aquí encontrarás algunos de mis proyectos escolares y colaborativos.</p>
+        <h3 style="margin-top:18px">Proyectos destacados</h3>
+        <ul>
+          <li>Viniles para espejos — Colaboración con CasaVidrioJrz</li>
+          <li>Flyer para revista de investigación <em>— Ciencia Vital</em></li>
+          <li>Participación en el 2do encuentro de Expresión Sororas en la exposición Mujeres en Resistencia celebrada del 4 y al 6 de marzo del 2025 en las instalaciones de IADA</li>
+        </ul>
+      </div>
+
+      <aside class="card">
+        <div class="info">
+          <img class="avatar" src="C:\Users\Vanesssa1\Desktop\assets\ciencia vital.jpeg" alt="Foto de Vanessa Flores">
+          <dl>
+            <dt>Nombre</dt>
+            <dd>Vanessa Flores Minor</dd>
+            <dt>Matrícula</dt>
+            <dd>241863</dd>
+            <dt>Escuela / Carrera</dt>
+            <dd>Universidad Autónoma de Cd. Juárez — Lic. en Diseño Gráfico (4º semestre)</dd>
+            <dt>Trabajo</dt>
+            <dd>Loloit Kids Boutique — Artista independiente</dd>
+          </dl>
+        </div>
+      </aside>
+    </section>
+
+    <!-- INFO -->
+    <section id="info" style="margin-top:3%">
+      <div class="card">
+        <h2>Información personal</h2>
+        <p>También cursé hasta 5° semestre de la carrera de Ingeniería Biomédica; algunos proyectos combinan diseño y aspectos biomédicos.</p>
+        <p>Actividades: venta de dibujos, origami, modelos en 3D (principiante), entre otros... </p>
+        <p>Instagram profesional: <a href="https://www.instagram.com/vflores.graphic/" target="_blank">@vflores.graphic</a>.</p>
+        <h3>Colaboraciones</h3>
+        <ul>
+          <li>CasaVidrioJrz — Proyecto de viniles para espejos.</li>
+          <li>Revista Ciencia Vital — Participación en diseño de flyer (1 semestre como encargada de diseño).</li>
+        </ul>
+        <h3>Enlaces a proyectos (Canva)</h3>
+        <ol>
+          <li><a href="https://www.canva.com/design/DAGNg8gLOPA/r1pFRJv9HNRadzL2siNvHg/edit" target="_blank">Creación de juego de mesa</a></li>
+          <li><a href="https://www.canva.com/design/DAGRNyyQeZM/LJgOClfk5KquHK1jSYaQfQ/edit" target="_blank">Infografía Tina Modotti</a></li>
+          <li><a href="https://www.canva.com/design/DAGThWvh91w/DXRsQcGx2zXtt4v0XD7_Dw/edit" target="_blank">Cartel social — Cáncer de Mama</a></li>
+          <li><a href="https://www.canva.com/design/DAGnwlHSmq0/EmB2fL6l8sy6wj9YvhCn6A/edit" target="_blank">Creación marca de lujo</a></li>
+          <li><a href="https://www.canva.com/design/DAG1E9Dpw8k/0b7xybfNjEJOumkdurgcKg/edit" target="_blank">Inspiración / Render objetos</a></li>
+          <li><a href="https://www.canva.com/design/DAGy0CFxDh4/iSP4gMc900hnMPfMGm1DjA/edit" target="_blank">Rediseño de marca</a></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria" style="margin-top:3%">
+      <div class="card">
+        <h2>Galería</h2>
+        <p class="lead">Imágenes de proyectos</p>
+        <div class="gallery" aria-label="Galería de proyectos">
+          <img src="C:\Users\Vanesssa1\Desktop\assets\Foto.jpeg" alt="Diseño de tarjeta héroe del personaje Bakugo Katsuki (My hero academia)">
+          <img src="C:\Users\Vanesssa1\Desktop\assets\ilustrador 2.jpeg" alt="Ejercicio de color y vectorización. Personaje: Mitsuri Kanroji (Kimetsu no Yaiba).">
+          <img src="C:\Users\Vanesssa1\Desktop\assets\Logo.jpeg" alt="Ejercicios de Modelado 3D – Programa MAYA 2026">
+          <img src="C:\Users\Vanesssa1\Desktop\assets\Modelado.jpeg" alt="Trabajo colaborativo – Viniles">
+          <img src="C:\Users\Vanesssa1\Desktop\assets\Ilustrador.jpeg" alt="Flyer evento - Ciencia Vital">
+          <img src="C:\Users\Vanesssa1\Desktop\assets\Viniles.jpg" alt="Trabajo colaborativo – Viniles">
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" style="margin-top:3%">
+      <div class="card">
+        <h2>Contacto</h2>
+        <p>Colaboraciones e interés en proyectos: <a href="mailto:vflores.graphic@gmail.com">vflores.graphic@gmail.com</a>.</p>
+        <div class="links">
+          <a href="https://www.instagram.com/vflores.graphic/" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div class="card">
+      <small>© Vanessa Flores — Portafolio digital</small>
+    </div>
+  </footer>
+</body>
+</html>
