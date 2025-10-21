@@ -127,14 +127,15 @@
       align-items: center; 
     }
 
-    .avatar {
-      width: 130px;
-      height: 130px;
-      border-radius: 12px;
+   .avatar {
+      width: 100%;
+      height: 100%;
       object-fit: cover;
-      flex-shrink: 0;
-      border: 2px solid var(--accent-light);
-    }
+      border-radius: 12px;
+      border: 3px solid var(--accent-light);
+      display: block;
+   }
+
 
     dl { margin: 0; }
     dt { font-weight: 700; color: #222; }
@@ -230,17 +231,16 @@
       </div>
 
       <aside class="card col-6">
-        <div class="info">
-          <img class="avatar" src="Vanessa.jepg" alt="Foto de Vanessa Flores">
+          <div class="info">
+            <img class="avatar" src="Vanessa.jpeg" alt="Foto de Vanessa Flores" onerror="this.style.display='none'">
           <dl>
             <dt>Nombre</dt><dd>Vanessa Flores Minor</dd>
             <dt>Matrícula</dt><dd>241863</dd>
             <dt>Escuela / Carrera</dt><dd>UACJ — Lic. en Diseño Gráfico (4º semestre)</dd>
             <dt>Trabajo</dt><dd>Loloit Kids Boutique — Artista independiente</dd>
-          </dl>
-        </div>
-      </aside>
-    </section>
+       </dl>
+     </div>
+    </aside>
 
     
     <section id="info" class="grid-12">
@@ -300,4 +300,5 @@
   </footer>
 </body>
 </html>
+
 
