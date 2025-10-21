@@ -18,7 +18,7 @@
     }
 
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { width: 100%; height: 100%; }
     body {
       background: var(--bg);
@@ -134,7 +134,8 @@
       border-radius: 12px;
       border: 3px solid var(--accent-light);
       display: block;
-   }
+    }
+
 
 
     dl { margin: 0; }
@@ -218,17 +219,23 @@
 
   <main>
     
-    <section id="home" class="grid-12">
-      <div class="card col-6">
-        <h1>¡Holaaa! — Soy Vanessa Flores</h1>
-        <p class="lead">Estudiante de Diseño Gráfico en la Universidad Autónoma de Ciudad Juárez (Campus IADA). Trabajo con ilustración, lettering, origami, entre otras cosas. Aquí encontrarás algunos de mis proyectos escolares y colaborativos.</p>
+<section id="home" class="grid-12">
+  <aside class="card col-6">
+    <img class="avatar" src="Vanessa.jpeg" alt="Foto de Vanessa Flores">
+  </aside>
+
+  <div class="card col-6">
+    <h1>¡Holaaa! — Soy Vanessa Flores</h1>
+    <p class="lead">Estudiante de Diseño Gráfico en la Universidad Autónoma de Ciudad Juárez (Campus IADA). Trabajo con ilustración, lettering, origami, entre otras cosas. Aquí encontrarás algunos de mis proyectos escolares y colaborativos.</p>
         <h3>Proyectos destacados</h3>
-        <ul>
-          <li>Viniles para espejos — Colaboración con CasaVidrioJrz</li>
-          <li>Flyer para revista de investigación <em>— Ciencia Vital</em></li>
-          <li>Participación en el 2do encuentro de Expresión Sororas — Mujeres en Resistencia (marzo 2025)</li>
-        </ul>
-      </div>
+           <ul>
+            <li>Viniles para espejos — Colaboración con CasaVidrioJrz</li>
+            <li>Flyer para revista de investigación <em>— Ciencia Vital</em></li>
+            <li>Participación en el 2do encuentro de Expresión Sororas — Mujeres en Resistencia (marzo 2025)</li>
+           </ul>
+        </div>
+     </section>
+
 
       <aside class="card col-6">
           <div class="info">
@@ -300,5 +307,6 @@
   </footer>
 </body>
 </html>
+
 
 
