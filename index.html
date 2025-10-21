@@ -136,6 +136,17 @@
       display: block;
     }
 
+    .avatar-principal {
+       width: 100%;
+       height: 400px;
+       object-fit: cover;
+       border-top-left-radius: 12px;
+       border-top-right-radius: 12px;
+       display: block;
+       border-bottom: 3px solid var(--accent-light);
+    }
+
+
 
 
     dl { margin: 0; }
@@ -220,21 +231,21 @@
   <main>
     
 <section id="home" class="grid-12">
-  <aside class="card col-6">
-    <img class="avatar" src="Vanessa.jpeg" alt="Foto de Vanessa Flores">
-  </aside>
+  <div class="card col-12" style="text-align:center; padding:0;">
+    <img class="avatar-principal" src="Vanessa.jpeg" alt="Foto de Vanessa Flores">
+    <div style="padding:2rem;">
+      <h1>¡Holaaa! — Soy Vanessa Flores</h1>
+      <p class="lead">Estudiante de Diseño Gráfico en la Universidad Autónoma de Ciudad Juárez (Campus IADA). Trabajo con ilustración, lettering, origami, entre otras cosas. Aquí encontrarás algunos de mis proyectos escolares y colaborativos.</p>
+      <h3>Proyectos destacados</h3>
+      <ul style="text-align:left; display:inline-block;">
+        <li>Viniles para espejos — Colaboración con CasaVidrioJrz</li>
+        <li>Flyer para revista de investigación <em>— Ciencia Vital</em></li>
+        <li>Participación en el 2do encuentro de Expresión Sororas — Mujeres en Resistencia (marzo 2025)</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-  <div class="card col-6">
-    <h1>¡Holaaa! — Soy Vanessa Flores</h1>
-    <p class="lead">Estudiante de Diseño Gráfico en la Universidad Autónoma de Ciudad Juárez (Campus IADA). Trabajo con ilustración, lettering, origami, entre otras cosas. Aquí encontrarás algunos de mis proyectos escolares y colaborativos.</p>
-        <h3>Proyectos destacados</h3>
-           <ul>
-            <li>Viniles para espejos — Colaboración con CasaVidrioJrz</li>
-            <li>Flyer para revista de investigación <em>— Ciencia Vital</em></li>
-            <li>Participación en el 2do encuentro de Expresión Sororas — Mujeres en Resistencia (marzo 2025)</li>
-           </ul>
-        </div>
-     </section>
 
 
       <aside class="card col-6">
@@ -307,6 +318,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
