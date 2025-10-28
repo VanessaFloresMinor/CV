@@ -1,12 +1,11 @@
-
 <!DOCTYPE html>
-<!-- saved from url=(0040)https://vanessafloresminor.github.io/CV/ -->
-<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portafolio — Vanessa Flores</title>
-  <meta name="description" content="Portafolio digital de Vanessa Flores — Diseño Gráfico">
-  <link href="./Actividad C3 - Vanessa Flores_files/css2" rel="stylesheet">
+  <meta name="description" content="Portafolio digital de Vanessa Flores — Diseño Gráfico" />
+  <link href="https://fonts.googleapis.com/css2?family=Stardom&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -18,9 +17,7 @@
       font-family: 'Stardom', sans-serif;
     }
 
-
-    { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { width: 100%; height: 100%; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       background: var(--bg);
       color: #111;
@@ -29,7 +26,6 @@
       overflow-x: hidden; 
     }
 
-  
     header {
       background: linear-gradient(90deg, #fff 0%, #f6faff 100%);
       box-shadow: 0 1px 6px rgba(0,0,0,.05);
@@ -69,15 +65,10 @@
       font-weight: 600;
       transition: color .3s ease;
     }
-
     .navlinks a:hover { color: var(--accent); }
 
-    
-    main { 
-      padding: 3rem 0; 
-    }
+    main { padding: 3rem 0; }
 
-    
     .grid-12 {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
@@ -87,72 +78,39 @@
       padding: 0 1rem;
     }
 
-    .col-6 { grid-column: span 6; }
     .col-12 { grid-column: span 12; }
-
-    
-    #home {
-      display: block;
-      height: auto;
-      margin-bottom: 2rem;
-    }
-
 
     .card {
       background: var(--card);
-      padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 6px 18px rgba(0,0,0,.04);
-      width: 100%;
-      height: 100%;
+      overflow: hidden;
     }
 
-    
     h1, h2, h3 {
       color: var(--accent);
       margin-top: 0;
     }
-    h1 { font-size: 1.9rem; margin-bottom: 0.5em; }
-    h2 { font-size: 1.5rem; margin-bottom: 0.5em; }
-    h3 { font-size: 1.2rem; margin-bottom: 0.5em; }
 
     p.lead { color: var(--muted); font-size: 1rem; margin-bottom: 1rem; }
-    p, li, dd { font-size: 0.95rem; }
 
-    
-    .info { 
-      display: flex; 
-      flex-wrap: wrap; 
-      gap: 18px; 
-      align-items: center; 
+    /* --- Foto principal con background-image --- */
+    .hero {
+      height: 400px;
+      background-image: url("./Actividad C3 - Vanessa Flores_files/Vanessa.jpeg");
+      background-size: cover;
+      background-position: center;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      border-bottom: 3px solid var(--accent-light);
     }
 
-   .avatar {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 12px;
-      border: 3px solid var(--accent-light);
-      display: block;
+    .hero-text {
+      padding: 2rem;
+      text-align: center;
     }
 
-    .avatar-principal {
-       width: 100%;
-       height: 400px;
-       object-fit: cover;
-       border-top-left-radius: 12px;
-       border-top-right-radius: 12px;
-       display: block;
-       border-bottom: 3px solid var(--accent-light);
-    }
-
-
-
-    dl { margin: 0; }
-    dt { font-weight: 700; color: #222; }
-    dd { margin: 0 0 10px; color: var(--muted); }
-
-   
+    /* --- Galería con CSS3 --- */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -160,25 +118,50 @@
       padding: 1rem;
     }
 
-    .gallery img {
-      width: 100%;
-      aspect-ratio: 3/4;
-      object-fit: contain;
-      background-color: #f7fbff;
+    .gallery .item {
+      height: 300px;
       border-radius: 14px;
       border: 3px solid #fff;
       box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      background-size: cover;
+      background-position: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-      padding: 6px;
     }
 
-    .gallery img:hover {
+    .gallery .item:hover {
       transform: scale(1.03);
       filter: brightness(1.05);
       box-shadow: 0 10px 22px rgba(0,0,0,0.15);
     }
 
-    
+    /* Asignamos cada imagen desde CSS */
+    .bkg-bakugo { background-image: url("./Actividad C3 - Vanessa Flores_files/BAKUGO.jpeg"); }
+    .bkg-ilustrador { background-image: url("./Actividad C3 - Vanessa Flores_files/ilustrador 2.jpeg"); }
+    .bkg-modelado { background-image: url("./Actividad C3 - Vanessa Flores_files/Modelado.jpeg"); }
+    .bkg-ciencia { background-image: url("./Actividad C3 - Vanessa Flores_files/Cienciavital.jpeg"); }
+    .bkg-viniles { background-image: url("./Actividad C3 - Vanessa Flores_files/Viniles 2.jpeg"); }
+
+    /* --- Ejemplo decorativo con pseudo-elemento --- */
+    #info::before {
+      content: "";
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 180px;
+      height: 180px;
+      background-image: url("./Actividad C3 - Vanessa Flores_files/Modelado.jpeg");
+      background-size: cover;
+      background-position: center;
+      transform: rotate(10deg);
+      opacity: 0.9;
+      border-radius: 12px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+    }
+
+    #info {
+      position: relative;
+    }
+
     footer {
       background: #fff;
       padding: 2rem 0;
@@ -186,23 +169,11 @@
       text-align: center;
     }
 
-    .links a {
-      display: inline-block;
-      margin-right: 12px;
-      text-decoration: none;
-      color: var(--muted);
-    }
-
-    .links a:hover { color: var(--accent); }
-
-    
     @media (max-width: 900px) {
       .grid-12 { grid-template-columns: 1fr; width: 90%; }
-      #home { height: auto; flex-direction: column; }
-      .card { height: auto; }
-      .avatar { width: 100px; height: 100px; }
+      .hero { height: 250px; }
+      #info::before { display: none; }
     }
-
   </style>
 </head>
 
@@ -218,82 +189,54 @@
           </div>
         </div>
         <div class="navlinks">
-          <a href="https://vanessafloresminor.github.io/CV/#home">Home</a>
-          <a href="https://vanessafloresminor.github.io/CV/#info">Información</a>
-          <a href="https://vanessafloresminor.github.io/CV/#galeria">Galería</a>
-          <a href="https://vanessafloresminor.github.io/CV/#contacto">Contacto</a>
+          <a href="#home">Home</a>
+          <a href="#info">Información</a>
+          <a href="#galeria">Galería</a>
+          <a href="#contacto">Contacto</a>
         </div>
       </nav>
     </div>
   </header>
 
   <main>
-    
-<section id="home" class="grid-12">
-  <div class="card col-12" style="text-align:center; padding:0;">
-    <img class="avatar-principal" src="./Actividad C3 - Vanessa Flores_files/Vanessa.jpeg" alt="Foto de Vanessa Flores">
+    <section id="home" class="grid-12">
+      <div class="card col-12">
+        <div class="hero"></div>
+        <div class="hero-text">
+          <h1>¡Holaaa! — Soy Vanessa Flores</h1>
+          <p class="lead">Estudiante de Diseño Gráfico en la UACJ (Campus IADA). Trabajo con ilustración, lettering y origami. Aquí verás algunos de mis proyectos escolares y colaborativos.</p>
+        </div>
+      </div>
+    </section>
 
-    <div style="padding:2rem;">
-      <h1>¡Holaaa! — Soy Vanessa Flores</h1>
-      <p class="lead">Estudiante de Diseño Gráfico en la Universidad Autónoma de Ciudad Juárez (Campus IADA). Trabajo con ilustración, lettering, origami, entre otras cosas. Aquí encontrarás algunos de mis proyectos escolares y colaborativos.</p>
-      <h3>Proyectos destacados</h3>
-      <ul style="text-align:left; display:inline-block;">
-        <li>Viniles para espejos — Colaboración con CasaVidrioJrz</li>
-        <li>Flyer para revista de investigación <em>— Ciencia Vital</em></li>
-        <li>Participación en el 2do encuentro de Expresión Sororas — Mujeres en Resistencia (marzo 2025)</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
-    
     <section id="info" class="grid-12">
       <div class="card col-12">
         <h2>Información personal</h2>
-        <p>También cursé hasta 5° semestre de la carrera de Ingeniería Biomédica; algunos proyectos combinan diseño y aspectos biomédicos.</p>
-        <p>Actividades: venta de dibujos, origami, modelos en 3D (principiante), entre otros...</p>
+        <p>También cursé hasta 5° semestre de Ingeniería Biomédica; algunos proyectos combinan diseño y aspectos biomédicos.</p>
+        <p>Actividades: venta de dibujos, origami, modelos 3D, entre otros.</p>
         <p>Instagram profesional: <a href="https://www.instagram.com/vflores.graphic/" target="_blank">@vflores.graphic</a>.</p>
-
-        <h3>Colaboraciones</h3> <ul>
-          <li>CasaVidrioJrz — Proyecto de viniles para espejos.</li>
-          <li>Revista Ciencia Vital — Participación en diseño de flyer.</li>
-        </ul>
-
-        <h3>Enlaces a proyectos (Canva)</h3> <ol>
-          <li><a href="https://www.canva.com/design/DAGNg8gLOPA/r1pFRJv9HNRadzL2siNvHg/edit" target="_blank">Creación de juego de mesa</a></li>
-          <li><a href="https://www.canva.com/design/DAGRNyyQeZM/LJgOClfk5KquHK1jSYaQfQ/edit" target="_blank">Infografía Tina Modotti</a></li>
-          <li><a href="https://www.canva.com/design/DAGThWvh91w/DXRsQcGx2zXtt4v0XD7_Dw/edit" target="_blank">Cartel social — Cáncer de Mama</a></li>
-          <li><a href="https://www.canva.com/design/DAGnwlHSmq0/EmB2fL6l8sy6wj9YvhCn6A/edit" target="_blank">Creación marca de lujo</a></li>
-          <li><a href="https://www.canva.com/design/DAG1E9Dpw8k/0b7xybfNjEJOumkdurgcKg/edit" target="_blank">Inspiración / Render objetos</a></li>
-          <li><a href="https://www.canva.com/design/DAGy0CFxDh4/iSP4gMc900hnMPfMGm1DjA/edit" target="_blank">Rediseño de marca</a></li>
-        </ol>
       </div>
     </section>
 
-    
     <section id="galeria" class="grid-12">
       <div class="card col-12">
         <h2>Galería</h2>
-        <p class="lead">Imágenes de proyectos</p>
+        <p class="lead">Imágenes añadidas con CSS3</p>
         <div class="gallery">
-          <img src="./Actividad C3 - Vanessa Flores_files/BAKUGO.jpeg" alt="Diseño de tarjeta héroe Bakugo Katsuki">
-          <img src="./Actividad C3 - Vanessa Flores_files/ilustrador 2.jpeg" alt="Vectorización Mitsuri Kanroji">
-          <img src="./Actividad C3 - Vanessa Flores_files/Modelado.jpeg" alt="Modelado 3D – MAYA">
-          <img src="./Actividad C3 - Vanessa Flores_files/Cienciavital.jpeg" alt="Flyer Ciencia Vital">
-          <img src="./Actividad C3 - Vanessa Flores_files/Viniles 2.jpeg" alt="Trabajo colaborativo – Viniles">
+          <div class="item bkg-bakugo"></div>
+          <div class="item bkg-ilustrador"></div>
+          <div class="item bkg-modelado"></div>
+          <div class="item bkg-ciencia"></div>
+          <div class="item bkg-viniles"></div>
         </div>
       </div>
     </section>
 
-    
     <section id="contacto" class="grid-12">
       <div class="card col-12">
         <h2>Contacto</h2>
-        <p>Colaboraciones e interés en proyectos: <a href="mailto:vflores.graphic@gmail.com">vflores.graphic@gmail.com</a>.</p>
-        <div class="links">
-          <a href="https://www.instagram.com/vflores.graphic/" target="_blank">Instagram</a>
-        </div>
+        <p>Colaboraciones: <a href="mailto:vflores.graphic@gmail.com">vflores.graphic@gmail.com</a></p>
+        <a href="https://www.instagram.com/vflores.graphic/" target="_blank">Instagram</a>
       </div>
     </section>
   </main>
@@ -303,6 +246,5 @@
       <small>© Vanessa Flores — Portafolio digital</small>
     </div>
   </footer>
-
-
-</body></html>
+</body>
+</html>
